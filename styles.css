@@ -1,0 +1,112 @@
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+body {
+  background: coral;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 100px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.container .main-video__container {
+  flex: 1 1 700px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 15px;
+}
+
+.container .main-video__container .main-video {
+  margin-bottom: 7px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.container .main-video__container .main-video__title {
+  font-size: 20px;
+  font-weight: #444;
+}
+
+.container .video-list__container {
+  flex: 1 1 350px;
+  height: 485px;
+  overflow-y: scroll;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 15px;
+}
+
+.container .video-list__container .list {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  background-color: #eee;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.container .video-list__container .list .list-video {
+  width: 100px;
+}
+
+.container .video-list__container .list.active {
+  background-color: #444;
+}
+
+.container .video-list__container .list.active .list-title {
+  color: #fff;
+}
+
+.container .video-list__container .list:last-child {
+  margin-bottom: 0;
+  border-radius: 5px;
+}
+
+.container .video-list__container .list .list-title {
+  font-size: 17px;
+  color: #444;
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+  .container {
+    margin: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .container .main-video__container .main-vid__title {
+    font-size: 15px;
+    text-align: center;
+  }
+  .container .video-list__container .list {
+    flex-flow: column;
+    gap: 10px;
+  }
+  .container .video-list__container .list .list-video {
+    width: 100%;
+  }
+  .container .video-list__container .list .list-title {
+    font-size: 15px;
+    text-align: center;
+  }
+}
